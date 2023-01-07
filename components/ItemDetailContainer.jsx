@@ -1,6 +1,13 @@
+import ItemDetail from "./ItemDetail"
+
 const ItemDetailContainer = () => {
     return(
-        <h1>Item Detail Container</h1>
+        <>
+            <itemDetail/>
+            <h1>Item Detail Container</h1>
+            <itemDetail/>
+
+        </>
     )
 }
 
