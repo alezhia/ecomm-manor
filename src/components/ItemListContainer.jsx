@@ -1,3 +1,4 @@
+import Container from "react-bootstrap/Container"
 import ItemList from "./ItemList"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
@@ -25,7 +26,7 @@ const ItemListContainer = () => {
     },[idCategoryParam])
 
     return (
-        <>
+        <Container className="d-flex flex-wrap gap-3">
             {itemListState.map(item => (
                                 <ItemList
                                     key= {item.idProducto}
@@ -37,7 +38,7 @@ const ItemListContainer = () => {
                                     portada= {item.portada}
                                 />
             ))}
-        </>
+        </Container>
     )
 }
 
