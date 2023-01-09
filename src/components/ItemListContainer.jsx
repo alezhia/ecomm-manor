@@ -9,13 +9,16 @@ import products from "../utils/products"
 const ItemListContainer = () => {
 
     const [itemListState, setItemListState] = useState([])
-    const { idCategoryParam } = useParams()
+    const { idCategoryParam, idSubCategoryParam } = useParams()
 
     const showItems = (items) => {
         if (idCategoryParam === undefined) {
             return items
-        } else {
+        } else if (idSubCategoryParam === undefined) {
             return items.filter(item => item.idCategoria === parseInt(idCategoryParam))
+        } else {
+            return items.filter(item => (item.idCategoria === parseInt(idCategoryParam)
+                                    && item.idSubCategoria === parseInt(idSubCategoryParam)))
         }
     }
 
@@ -23,7 +26,7 @@ const ItemListContainer = () => {
         customFetch(1000, showItems(products))
             .then(res => setItemListState(res))
             .catch(err => console.log(err))
-    },[idCategoryParam])
+    },[idCategoryParam, idSubCategoryParam])
 
     return (
         <Container className="d-flex flex-wrap gap-3">
@@ -31,8 +34,8 @@ const ItemListContainer = () => {
                                 <ItemList
                                     key= {item.idProducto}
                                     categoria= {item.categoria}
+                                    subCategoria= {item.subCategoria}
                                     nombre= {item.nombre}
-                                    anio= {item.anio}
                                     precio= {item.precio}
                                     stock= {item.stock}
                                     portada= {item.portada}

@@ -11,6 +11,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<ItemListContainer />} />
                     <Route path="/category/:idCategoryParam" element={<ItemListContainer />} />
+                    <Route path="/category/:idCategoryParam/:idSubCategoryParam" element={<ItemListContainer />} />
                 </Routes>
             </Container>
         </BrowserRouter>

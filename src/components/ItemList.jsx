@@ -2,7 +2,7 @@ import "../styles/ItemList.css"
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 
-const ItemList = ({ categoria, nombre, anio, precio, stock, portada }) => {
+const ItemList = ({ categoria, subCategoria, nombre, precio, stock, portada }) => {
     return (
         <Card className="card-container bg-light" style={{ width: "14rem" }}>
             <div className="img-container d-flex justify-content-center align-items-center" >
@@ -11,7 +11,7 @@ const ItemList = ({ categoria, nombre, anio, precio, stock, portada }) => {
             <Card.Body className="card-body d-flex flex-column justify-content-between">
                 <div className="card-headings">
                     <Card.Title>{nombre}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{categoria} - {anio}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">{categoria} / {subCategoria}</Card.Subtitle>
                 </div>
                 <div className="card-txt mb-2">
                     <Card.Text>Precio: {precio}</Card.Text>
