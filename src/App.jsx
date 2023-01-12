@@ -1,6 +1,6 @@
 //import Bootstrap
-import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.css";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 import ItemDetailContainer from "./components/ItemDetailContainer"
 const App = () => {

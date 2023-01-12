@@ -1,5 +1,5 @@
 //import Bootstrap
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css"
 
 import ItemDetail from "./ItemDetail"
 import data from "../utils/data"
@@ -8,7 +8,7 @@ import { useState, useEffect } from "react"
 import {useParams} from "react-router-dom"
 const ItemDetailContainer = () => {
     //custom ID to prove fetch
-    const {idItem}=useParams();
+    const {idItem}=useParams()
     //Agregar useParams para probar por Navegador, sino Maxi se enoja.
 
 
