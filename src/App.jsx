@@ -10,8 +10,8 @@ const App = () => {
                 <h1>ecomm-manor</h1>
                 <Routes>
                     <Route path="/" element={<ItemListContainer />} />
-                    <Route path="/category/:idCategoryParam" element={<ItemListContainer />} />
-                    <Route path="/category/:idCategoryParam/:idSubCategoryParam" element={<ItemListContainer />} />
+                    <Route path="/catalogo/:categoryParam" element={<ItemListContainer />} />
+                    <Route path="/catalogo/:categoryParam/:subCategoryParam" element={<ItemListContainer />} />
                 </Routes>
             </Container>
         </BrowserRouter>
