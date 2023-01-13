@@ -1,0 +1,14 @@
+
+{
+    "name": "Vestido",
+    "id": 1,
+    "category": "ropa",
+    "price": 35,
+    "img": [
+        "url1",
+        "url2",
+        "url3"
+    ],
+    "description": "descripcion del producto con palabras claves para la mejor busqueda"
+
+}
